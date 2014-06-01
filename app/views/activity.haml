@@ -1,12 +1,13 @@
 %header
   创建活动
   .header-left
-    %button.btn-4.btn-primary(ng-click="go_activity_list()") 返回
+    %button.btn-4.btn-primary(ng-click="go_activity_list()" ng-show="show") 返回
   %br
   %br
   %h2(align='left' style='color:blue')活动名称
   %br
-  %input.input-full
+  %input.input-full( ng-model='input_activity')
   %br
+  %p(style="color:red"  ng-show="repeat")*活动名称重复
   %br
-  %button.btn.btn-primary(style='width:100%'ng-click='go_sign_up()')创建
+  %button.btn.btn-primary(style='width:100%' ng-disabled='!input_activity' ng-click='go_sign_up()')创建
