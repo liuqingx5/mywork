@@ -24,3 +24,9 @@ Activity.judge_repeat_activity = function (input_activity) {
 
 }
 
+Activity.save_start_activity=function(name){
+    localStorage.startint_activity=name
+}
+
+
+
