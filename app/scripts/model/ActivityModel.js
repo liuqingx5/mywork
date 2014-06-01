@@ -18,8 +18,9 @@ Activity.save_current_activity = function (current_activity) {
 }
 
 Activity.judge_repeat_activity = function (input_activity) {
-     var repeat_activity= $.find(Activity.activities(), function (activity) {
+    return  _.find(Activity.activities(), function (activity) {
         return activity.activity == input_activity;
     })
-    return repeat_activity;
+
 }
+
