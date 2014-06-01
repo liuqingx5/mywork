@@ -54,3 +54,7 @@ Activity.change_status = function (status) {
     localStorage.setItem('activities', JSON.stringify(activities));
 }
 
+Activity.background_yellow = function (activity) {
+    return localStorage.starting_activity == activity;
+}
+
