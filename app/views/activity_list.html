@@ -1,1 +1,1 @@
-<header>活动列表<div class="header-right"><button ng-click="go_create_activity()" class="btn-4 btn-primary">创建活动</button></div></header><wrapper class="wrapper"><ul class="list-style-2"><li ng-repeat="activity in activities"><h3>{{activity.activity}}</h3></li></ul></wrapper>
+<header>活动列表<div class="header-right"><button ng-click="go_create_activity()" class="btn-4 btn-primary">创建活动</button></div></header><wrapper class="wrapper"><ul class="list-style-2"><li ng-repeat="activity in activities" ng-click="sign_up(activity.activity)"><h3>{{activity.activity}}</h3></li></ul></wrapper>

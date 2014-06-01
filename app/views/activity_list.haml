@@ -4,6 +4,6 @@
     %button.btn-4.btn-primary(ng-click="go_create_activity()") 创建活动
 %wrapper.wrapper
   %ul.list-style-2
-    %li(ng-repeat="activity in activities")
+    %li(ng-repeat="activity in activities" ng-click="sign_up(activity.activity)")
       %h3
         {{activity.activity}}

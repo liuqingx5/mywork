@@ -15,10 +15,12 @@ angular.module('myworkApp')
         $scope.show_which="start"
         $scope.switch_end=function(){
             $scope.show_which="end";
+            Activity.change_status("start");
         }
 
         $scope.switch_start=function(){
             $scope.show_which="start";
+            Activity.change_status("end");
         }
 
 

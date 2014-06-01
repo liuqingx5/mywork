@@ -13,6 +13,11 @@ angular.module('myworkApp')
         }
         $scope.activities =Activity.activities();
 
+        $scope.sign_up=function(activity){
+            Activity.save_current_activity(activity);
+            $location.path('/sign_up');
+        }
+
 
 
     });

@@ -13,8 +13,8 @@ Activity.activities = function () {
     return JSON.parse(localStorage.getItem('activities')) || [];
 }
 
-Activity.save_current_activity = function (current_activity) {
-    localStorage.current_activity = current_activity;
+Activity.save_current_activity = function (activity) {
+    localStorage.current_activity = activity;
 }
 
 Activity.judge_repeat_activity = function (input_activity) {
@@ -24,9 +24,16 @@ Activity.judge_repeat_activity = function (input_activity) {
 
 }
 
-Activity.save_start_activity=function(name){
-    localStorage.startint_activity=name
+Activity.save_start_activity = function (name) {
+    localStorage.startint_activity = name
 }
 
-
+Activity.change_status = function (status) {
+    var activities = JSON.parse(localStorage.getItem('activities')) || [];
+    var start_activity = _.find(activities, function (activity) {
+        activity.activity = localStorage.current_activity;
+    })
+    start_activity.status=status;
+    localStorage.setItem('activities', JSON.stringify(activities));
+}
 
