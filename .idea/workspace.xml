@@ -22,19 +22,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/activity.haml">
+      <file leaf-file-name="activity_list.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/activity_list.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="70" selection-start="349" selection-end="349" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Activity.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/Activity.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="20" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+            <state line="8" column="29" selection-start="218" selection-end="218" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
               <folding />
             </state>
           </provider>
@@ -43,19 +34,17 @@
       <file leaf-file-name="ActivityModel.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/model/ActivityModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.093457945" vertical-offset="0" max-vertical-offset="642">
+            <state line="18" column="0" selection-start="545" selection-end="545" vertical-scroll-proportion="0.42056075" vertical-offset="0" max-vertical-offset="642">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="underscore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/bower_components/underscore/underscore.js">
+      <file leaf-file-name="ActivityList.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/ActivityList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="18" selection-start="5814" selection-end="5814" vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="20235">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="14" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,20 +67,20 @@
         <option value="$PROJECT_DIR$/app/views/activity.html" />
         <option value="$PROJECT_DIR$/app/views/activity_list.html" />
         <option value="$PROJECT_DIR$/app/views/sign_up.html" />
-        <option value="$PROJECT_DIR$/app/styles/android.css" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/SignUp.js" />
         <option value="$PROJECT_DIR$/app/views/sign_up.haml" />
-        <option value="$PROJECT_DIR$/app/views/activity_list.haml" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/ActivityList.js" />
         <option value="$PROJECT_DIR$/app/views/activity.haml" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/Activity.js" />
         <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/scripts/model/ActivityModel.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/Activity.js" />
+        <option value="$PROJECT_DIR$/app/views/activity_list.haml" />
+        <option value="$PROJECT_DIR$/app/styles/android.css" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/ActivityList.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1366" />
+    <option name="width" value="1218" />
     <option name="height" value="742" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -166,7 +155,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -327,15 +316,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="742" extended-state="0" />
+    <frame x="0" y="0" width="1218" height="742" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886904" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32884902" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22279412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886904" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -344,7 +334,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -499,30 +488,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3295" column="6" selection-start="60084" selection-end="60090" vertical-scroll-proportion="0.33333334" vertical-offset="49225" max-vertical-offset="92460">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/android.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="468" column="1" selection-start="8996" selection-end="8996" vertical-scroll-proportion="0.65833336" vertical-offset="6625" max-vertical-offset="11280">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/activity_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/ActivityList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="310" selection-end="310" vertical-scroll-proportion="0.25581396" vertical-offset="0" max-vertical-offset="645">
           <folding />
         </state>
       </provider>
@@ -541,39 +509,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/activity_list.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="65" selection-start="96" selection-end="96" vertical-scroll-proportion="0.072463766" vertical-offset="0" max-vertical-offset="621">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="16" selection-start="109" selection-end="109" vertical-scroll-proportion="0.13953489" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/activity.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="70" selection-start="349" selection-end="349" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/bower_components/underscore/underscore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="18" selection-start="5814" selection-end="5814" vertical-scroll-proportion="0.0" vertical-offset="2070" max-vertical-offset="20235">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/Activity.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="20" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
@@ -585,16 +523,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/underscore/underscore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="163" column="18" selection-start="5814" selection-end="5814" vertical-scroll-proportion="0.58411217" vertical-offset="2070" max-vertical-offset="20235">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="42" selection-start="2639" selection-end="2639" vertical-scroll-proportion="0.42975205" vertical-offset="580" max-vertical-offset="1185">
+        <state line="67" column="52" selection-start="3238" selection-end="3238" vertical-scroll-proportion="0.74214876" vertical-offset="556" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/Activity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="21" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.864486" vertical-offset="0" max-vertical-offset="735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/activity.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="89" selection-start="368" selection-end="368" vertical-scroll-proportion="0.29126215" vertical-offset="0" max-vertical-offset="618">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="235" column="1" selection-start="3392" selection-end="3392" vertical-scroll-proportion="0.41038525" vertical-offset="3280" max-vertical-offset="92460">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/android.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="608" column="24" selection-start="11466" selection-end="11466" vertical-scroll-proportion="0.559464" vertical-offset="8786" max-vertical-offset="11280">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/ActivityList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/activity_list.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="29" selection-start="218" selection-end="218" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="210">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/model/ActivityModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="84" selection-end="84" vertical-scroll-proportion="0.093457945" vertical-offset="0" max-vertical-offset="642">
+        <state line="18" column="0" selection-start="545" selection-end="545" vertical-scroll-proportion="0.42056075" vertical-offset="0" max-vertical-offset="642">
           <folding />
         </state>
       </provider>
