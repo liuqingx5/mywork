@@ -81,10 +81,11 @@ header {
 	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #0079c8), color-stop(1, #0067b6));
 	box-shadow: 0px 0px 3px 0px rgba(0,0,0, .8);
 	padding:0;
-	color:#0040D0;
+    color: #ffffff;
 	font-size:16px;
 	text-align:center;
 	-webkit-transition: all 0.3s ease;
+    background: #0079c8;
 }
 
 .header-left {
@@ -144,6 +145,7 @@ footer {
 	text-shadow: #222 -1px -1px;
 	text-decoration: none;
 	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #3d3d3d), color-stop(1, #272727));
+    background: #000000;
 }
 
 .footer-nav li:hover a, .footer-nav li:active a, .footer-nav li.active a {
@@ -152,6 +154,7 @@ footer {
 	border-left: none;
 	border-right: none;
 	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #242424), color-stop(1, #242424));
+    background: #000000;
 }
 
 .footer-nav li a i {
@@ -415,6 +418,7 @@ footer {
 	background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #5ab6fc), color-stop(0.02, #1296eb), color-stop(1, #0073c4));
 	color: #fff;
 	border: 1px solid #005b9b;
+    background: #0088cc;
 }
 
 .btn-4:hover {
