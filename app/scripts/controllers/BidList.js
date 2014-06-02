@@ -24,10 +24,16 @@ angular.module('myworkApp')
         }
 
         if (Bid.start_bid_or_activity()) {
-            $scope.which_show="un_click";
+            $scope.which_show = "un_click";
             $scope.disabled = true;
-        }else{
-            $scope.which_show="start";
+        } else {
+            $scope.which_show = "start";
+        }
+
+        $scope.bid_yellow = function (starting_bid) {
+            if (Bid.bid_background_yellow(starting_bid)) {
+                return "start";
+            }
         }
 
     });

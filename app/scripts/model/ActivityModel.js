@@ -56,6 +56,6 @@ Activity.change_status = function (status) {
 }
 
 Activity.background_yellow = function (activity) {
-    return localStorage.starting_activity == activity;
+    return localStorage.starting_activity == activity || localStorage.starting_bid_activity == activity;
 }
 

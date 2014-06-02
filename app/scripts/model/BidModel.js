@@ -44,14 +44,18 @@ Bid.current_bid = function () {
 
 Bid.save_start = function () {
     localStorage.starting_bid = localStorage.current_bid;
-    localStorage.starting_bid_avtivity = localStorage.current_activity;
+    localStorage.starting_bid_activity = localStorage.current_activity;
 }
 
 Bid.clear_start = function () {
     localStorage.starting_bid = '';
-    localStorage.starting_bid_avtivity = '';
+    localStorage.starting_bid_activity = '';
 }
 
 Bid.start_bid_or_activity = function () {
     return localStorage.starting_activity || localStorage.starting_bid;
+}
+
+Bid.bid_background_yellow = function (starting_bid) {
+    return localStorage.starting_bid == starting_bid && localStorage.current_activity == localStorage.starting_bid_activity;
 }

@@ -7,7 +7,7 @@
     %button.btn.btn-4(ng-switch-when="un_click" ng-disabled="disabled")开始
 %wrapper.wrapper
   %ul.list-style-2
-    %li(ng-repeat="current_bid in current_bids" ng-click='bid_sign(current_bid.name)')
+    %li(class="{{bid_yellow(current_bid.name)}}" ng-repeat="current_bid in current_bids" ng-click='bid_sign(current_bid.name)')
       %h3
         {{current_bid.name}}
 %footer
