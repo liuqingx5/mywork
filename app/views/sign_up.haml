@@ -5,10 +5,10 @@
   .header-right(ng-switch="show_which")
     %button.btn-4(ng-click="switch_end()" ng-switch-when="start")开始
     %button.btn.btn-4(ng-switch-when="un_click" ng-disabled="disabled")开始
-    %button.btn-4(ng-click="switch_start()" ng-switch-when="end" )结束
+    %button.btn-4(ng-click="switch_start()" ng-switch-when="end")结束
 %footer
   %ul.footer-nav.footer-nav-2tabs
     %li.active
       %a.btn-style.btn-4报名
     %li
-      %a.btn-style.btn-4竞价
+      %a.btn-style.btn-4(ng-click="go_bid_list()")竞价

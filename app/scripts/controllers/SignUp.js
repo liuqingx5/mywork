@@ -27,6 +27,10 @@ angular.module('myworkApp')
             $location.path('/activity_list');
         }
 
+        $scope.go_bid_list=function(){
+            $location.path('/bid_list');
+        }
+
         $scope.switch_end = function () {
             $scope.show_which = "end";
             Activity.change_status("start");
@@ -38,6 +42,7 @@ angular.module('myworkApp')
                 $scope.show_which = "start";
                 Activity.change_status("end");
                 Activity.clear_start_activity();
+                $location.path('/bid_list');
             }
         }
 
