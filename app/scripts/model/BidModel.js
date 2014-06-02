@@ -1,7 +1,7 @@
-function Bid(activity,bid){
-    this.activity=activity;
-    this.name=bid;
-    this.status="un_start";
+function Bid(activity, bid) {
+    this.activity = activity;
+    this.name = bid;
+    this.status = "un_start";
 }
 
 Bid.save_bid = function () {
@@ -24,25 +24,34 @@ Bid.current_bid_lists = function () {
 }
 
 Bid.save_current_bid = function (current_bid) {
-    localStorage.current_bid=current_bid;
+    localStorage.current_bid = current_bid;
 }
 
-//console.log('aaa',Bid.current_bid_lists ())
 Bid.change_status = function (status) {
     var bid_lists = JSON.parse(localStorage.getItem('bid_lists')) || [];
-    var bid_list = _.find(Bid.current_bid_lists(), function (bid_list) {
-        return bid_list.name == localStorage.current_bid
+    var bid = _.find(bid_lists, function (bid_list) {
+        return bid_list.name == localStorage.current_bid && bid_list.activity == localStorage.current_activity;
     })
-    bid_list.status = status;
+    bid.status = status;
     localStorage.setItem('bid_lists', JSON.stringify(bid_lists));
 }
 
-Bid.save_start=function(){
+Bid.current_bid = function () {
+    return   _.find(Bid.get_bid(), function (bid_list) {
+        return bid_list.name == localStorage.current_bid && bid_list.activity == localStorage.current_activity;
+    });
+}
+
+Bid.save_start = function () {
     localStorage.starting_bid = localStorage.current_bid;
     localStorage.starting_bid_avtivity = localStorage.current_activity;
 }
 
-Bid.clear_start=function(){
-    localStorage.starting_bid='';
-    localStorage.starting_bid_avtivity='';
+Bid.clear_start = function () {
+    localStorage.starting_bid = '';
+    localStorage.starting_bid_avtivity = '';
+}
+
+Bid.start_bid_activity = function () {
+    return localStorage.starting_activity || localStorage.starting_bid;
 }
