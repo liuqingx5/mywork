@@ -19,7 +19,7 @@ angular.module('myworkApp')
             $location.path('/sign_up');
         }
 
-        if (Activity.start_activity()) {
+        if (Bid.start_bid_or_activity()) {
             $scope.disabled = true;
         }
 

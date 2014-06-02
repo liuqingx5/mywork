@@ -2,8 +2,9 @@
   竞价列表
   .header-left
     %button.btn-4(ng-click="go_activity_list()")返回
-  .header-right
-    %button.btn-4(ng-click="go_bid_sign()" ng-disabled="disabled")开始
+  .header-right(ng-switch="which_show")
+    %button.btn-4(ng-switch-when="start"  ng-click="go_bid_sign()" )开始
+    %button.btn.btn-4(ng-switch-when="un_click" ng-disabled="disabled")开始
 %wrapper.wrapper
   %ul.list-style-2
     %li(ng-repeat="current_bid in current_bids" ng-click='bid_sign(current_bid.name)')

@@ -9,7 +9,7 @@ angular.module('myworkApp')
             'Karma'
         ];
 
-        if (!Activity.start_activity()) {
+        if (!Bid.start_bid_or_activity()) {
             $scope.show_which = "start";
         } else {
             judge_current_is_starting();
@@ -27,7 +27,7 @@ angular.module('myworkApp')
             $location.path('/activity_list');
         }
 
-        $scope.go_bid_list=function(){
+        $scope.go_bid_list = function () {
             $location.path('/bid_list');
         }
 

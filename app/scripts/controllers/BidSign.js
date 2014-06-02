@@ -15,14 +15,11 @@ angular.module('myworkApp')
         button_status();
         function button_status() {
             var current_bid = Bid.current_bid();
-            console.log('wwwww', current_bid)
             if (current_bid.status == "start") {
-                console.log('aaaaaaaaaaaaaaaaaaaaa')
                 $scope.which_button = "end";
                 return;
             }
             if (current_bid.status == "end") {
-                console.log('dgdfffffffffhjkl')
                 $scope.which_button = "un_click_end";
                 $scope.disabled_end = true;
                 return;
@@ -33,7 +30,7 @@ angular.module('myworkApp')
         }
 
         function judge_is_start_bid_activity() {
-            if (!Bid.start_bid_activity()) {
+            if (!Bid.start_bid_or_activity()) {
                 $scope.which_button = "start";
                 return;
             } else {

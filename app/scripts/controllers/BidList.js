@@ -23,5 +23,11 @@ angular.module('myworkApp')
             $location.path('/bid_sign');
         }
 
+        if (Bid.start_bid_or_activity()) {
+            $scope.which_show="un_click";
+            $scope.disabled = true;
+        }else{
+            $scope.which_show="start";
+        }
 
     });

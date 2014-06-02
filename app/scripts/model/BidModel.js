@@ -52,6 +52,6 @@ Bid.clear_start = function () {
     localStorage.starting_bid_avtivity = '';
 }
 
-Bid.start_bid_activity = function () {
+Bid.start_bid_or_activity = function () {
     return localStorage.starting_activity || localStorage.starting_bid;
 }
