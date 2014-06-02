@@ -38,10 +38,11 @@ Activity.clear_start_activity = function () {
     localStorage.starting_activity = '';
 }
 
-Activity.start_activity=function(){
+Activity.start_activity = function () {
     return localStorage.starting_activity;
 }
-Activity.current_is_starting=function(){
+
+Activity.current_is_starting = function () {
     return localStorage.starting_activity == localStorage.current_activity;
 }
 

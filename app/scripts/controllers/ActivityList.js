@@ -11,6 +11,7 @@ angular.module('myworkApp')
         $scope.go_create_activity = function () {
             $location.path('/');
         }
+
         $scope.activities = Activity.activities();
 
         $scope.sign_up = function (activity) {

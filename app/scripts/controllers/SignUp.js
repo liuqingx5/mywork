@@ -34,9 +34,11 @@ angular.module('myworkApp')
         }
 
         $scope.switch_start = function () {
-            $scope.show_which = "start";
-            Activity.change_status("end");
-            Activity.clear_start_activity();
+            if (confirm("确定要结束本次报名吗？")) {
+                $scope.show_which = "start";
+                Activity.change_status("end");
+                Activity.clear_start_activity();
+            }
         }
 
 

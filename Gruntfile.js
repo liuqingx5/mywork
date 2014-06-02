@@ -76,7 +76,24 @@ module.exports = function (grunt) {
           sign_up: {
               src: "app/views/sign_up.haml",
               dest: "app/views/sign_up.html"
+          },
+          bid_list:{
+              src: "app/views/bid_list.haml",
+              dest: "app/views/bid_list.html"
+          },
+          bid_result:{
+              src: "app/views/bid_result.haml",
+              dest: "app/views/bid_result.html"
+          },
+          bid_sign:{
+              src: "app/views/bid_sign.haml",
+              dest: "app/views/bid_sign.html"
+          },
+          price_count:{
+              src: "app/views/price_count.haml",
+              dest: "app/views/price_count.html"
           }
+
 
 
       },
@@ -413,3 +430,4 @@ module.exports = function (grunt) {
     'build'
   ]);
 };
+
