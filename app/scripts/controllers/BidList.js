@@ -7,6 +7,15 @@ angular.module('myworkApp')
             'AngularJS',
             'Karma'
         ];
+        if (Bid.start_bid_or_activity()) {
+            $scope.which_show = "un_click";
+            $scope.disabled = true;
+        } else {
+            $scope.which_show = "start";
+        }
+
+        $scope.current_bids = Bid.current_bid_lists();
+
         $scope.go_activity_list = function () {
             $location.path('/activity_list');
         }
@@ -16,23 +25,20 @@ angular.module('myworkApp')
             $location.path('/bid_sign')
         }
 
-        $scope.current_bids = Bid.current_bid_lists();
-
         $scope.bid_sign = function (bid) {
             Bid.save_current_bid(bid);
             $location.path('/bid_sign');
         }
 
-        if (Bid.start_bid_or_activity()) {
-            $scope.which_show = "un_click";
-            $scope.disabled = true;
-        } else {
-            $scope.which_show = "start";
-        }
-
         $scope.bid_yellow = function (starting_bid) {
             if (Bid.bid_background_yellow(starting_bid)) {
                 return "start";
+            }
+        }
+
+        $scope.go_sign_up = function () {
+            if (!Bid.start_bid()) {
+                $location.path('/sign_up');
             }
         }
 

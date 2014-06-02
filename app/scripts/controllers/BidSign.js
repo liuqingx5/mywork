@@ -40,7 +40,6 @@ angular.module('myworkApp')
             }
         }
 
-
         $scope.begin = function () {
             $scope.which_button = "end";
             Bid.change_status("start");
@@ -51,6 +50,7 @@ angular.module('myworkApp')
             if (confirm('确定要结束本次竞价吗？')) {
                 Bid.change_status("end");
                 Bid.clear_start();
+                $location.path('/bid_result')
             }
         }
 

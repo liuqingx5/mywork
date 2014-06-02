@@ -56,6 +56,10 @@ Bid.start_bid_or_activity = function () {
     return localStorage.starting_activity || localStorage.starting_bid;
 }
 
+Bid.start_bid = function () {
+    return localStorage.starting_bid;
+}
+
 Bid.bid_background_yellow = function (starting_bid) {
     return localStorage.starting_bid == starting_bid && localStorage.current_activity == localStorage.starting_bid_activity;
 }
