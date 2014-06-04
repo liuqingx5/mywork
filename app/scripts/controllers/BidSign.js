@@ -8,10 +8,6 @@ angular.module('myworkApp')
             'Karma'
         ];
 
-        $scope.go_bid_list = function () {
-            $location.path('/bid_list');
-        }
-
         button_status();
         function button_status() {
             var current_bid = Bid.current_bid();
@@ -38,6 +34,10 @@ angular.module('myworkApp')
                 $scope.disabled_start = true;
                 return;
             }
+        }
+
+        $scope.go_bid_list = function () {
+            $location.path('/bid_list');
         }
 
         $scope.begin = function () {
