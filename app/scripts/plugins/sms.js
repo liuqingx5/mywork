@@ -13,8 +13,18 @@ var native_accessor = {
     },
 
     process_received_message: function (json_message) {
-        console.log('aaaaaaaaaaaaa');
+        var get_bm = json_message.messages[0].message.substr(0, 2).toUpperCase();
+        if (get_bm == 'BM') {
+            Message.save_message(json_message);
+        }
     }
+
+
+
+
+
+
+
 
 
 };
