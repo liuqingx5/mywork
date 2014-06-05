@@ -36,3 +36,13 @@ Message.current_sign_up = function () {
     })
 }
 
+Message.refresh_sign_up = function () {
+    var id_exist = document.getElementById("refresh_sign_up")
+    if (id_exist) {
+        var scope = angular.element(id_exist).scope();
+        scope.$apply(function () {
+            scope.refresh();
+        })
+    }
+}
+

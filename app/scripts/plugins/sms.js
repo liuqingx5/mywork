@@ -34,6 +34,7 @@ function reply_message(json_message) {
 function success_or_repeat_reply(json_message) {
     if (!Message.judge_repeat(json_message)) {
         Message.save_message(json_message);
+        Message.refresh_sign_up();
         console.log("恭喜！报名成功");
         return;
     } else {

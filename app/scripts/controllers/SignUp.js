@@ -46,7 +46,10 @@ angular.module('myworkApp')
             }
         }
 
-        $scope.currents = Message.current_sign_up();
-
+        $scope.refresh = function () {
+            $scope.currents = Message.current_sign_up();
+            $scope.counter = Message.current_sign_up().length;
+        }
+        $scope.refresh();
 
     });
