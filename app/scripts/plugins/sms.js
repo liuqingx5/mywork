@@ -13,25 +13,27 @@ var native_accessor = {
     },
 
     process_received_message: function (json_message) {
+        var messages = JSON.parse(localStorage.getItem('messages')) || [];
         var get_bm = json_message.messages[0].message.substr(0, 2).toUpperCase();
         if (get_bm == 'BM') {
-            reply_message();
-//            Message.save_message(json_message);
+            reply_message(json_message);
         }
     }
 };
 
-var messages = JSON.parse(localStorage.getItem('messages')) || [];
-function reply_message() {
+
+function reply_message(json_message) {
     if (Activity.start_activity()) {
-        success_or_repeat_reply();
-    } else {
+        success_or_repeat_reply(json_message);
+    }
+    else {
         error_reply();
     }
 }
 
-function success_or_repeat_reply() {
-    if (!Message.judge_repeat()) {
+function success_or_repeat_reply(json_message) {
+    if (!Message.judge_repeat(json_message)) {
+        Message.save_message(json_message);
         console.log("恭喜！报名成功");
         return;
     } else {
@@ -50,9 +52,6 @@ function error_reply() {
         return;
     }
 }
-
-
-
 
 
 function notify_message_received(message_json) {

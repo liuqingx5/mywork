@@ -6,6 +6,13 @@
     %button.btn-4(ng-click="switch_end()" ng-switch-when="start")开始
     %button.btn.btn-4(ng-switch-when="un_click" ng-disabled="disabled")开始
     %button.btn-4(ng-click="switch_start()" ng-switch-when="end")结束
+%wrapper.wrapper
+  %ul.list-style-2
+    %li(ng-repeat="current in currents")
+      %h3
+        {{current.name}}
+      %h3(align="right")
+        {{current.phone}}
 %footer
   %ul.footer-nav.footer-nav-2tabs
     %li.active

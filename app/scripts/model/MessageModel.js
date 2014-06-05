@@ -26,6 +26,13 @@ Message.get_messages = function () {
 
 Message.judge_repeat = function (json_message) {
     return _.find(Message.get_messages(), function (message) {
-       return  message.phone == Message.received_phone(json_message) && message.activity == localStorage.starting_activity;
+        return  message.phone == Message.received_phone(json_message) && message.activity == localStorage.starting_activity;
     })
 }
+
+Message.current_sign_up = function () {
+    return _.filter(Message.get_messages(), function (message) {
+        return message.activity == localStorage.current_activity;
+    })
+}
+

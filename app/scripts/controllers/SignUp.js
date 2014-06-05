@@ -46,5 +46,7 @@ angular.module('myworkApp')
             }
         }
 
+        $scope.currents = Message.current_sign_up();
+
 
     });
