@@ -12,7 +12,7 @@ Message.received_phone = function (json_message) {
     return json_message.messages[0].phone;
 }
 
-Message.received_price=function (json_message){
+Message.received_price = function (json_message) {
     return json_message.messages[0].message.substr(2).replace(/\s/g, '');
 }
 
@@ -37,6 +37,12 @@ Message.judge_repeat = function (json_message) {
 Message.current_sign_up = function () {
     return _.filter(Message.get_messages(), function (message) {
         return message.activity == localStorage.current_activity;
+    })
+}
+
+Message.search_people_name = function () {
+    return _.find(Message.get_messages(), function (message) {
+        return message.activity == localStorage.starting_bid_activity;
     })
 }
 

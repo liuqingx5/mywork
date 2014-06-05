@@ -9,7 +9,7 @@ function BidMessage(activity, bid, name, phone, price) {
 BidMessage.save = function (json_message) {
     var activity = localStorage.starting_bid_activity;
     var bid = localStorage.starting_bid;
-    var people = Message.received_name(json_message);
+    var people = Message.search_people_name().name;
     var phone = Message.received_phone(json_message);
     var price = Message.received_price(json_message)
     var bid_messages = JSON.parse(localStorage.getItem('bid_messages')) || [];
@@ -44,6 +44,18 @@ BidMessage.search_current = function () {
     return _.filter(BidMessage.get(), function (bid_message) {
         return bid_message.activity == localStorage.current_activity && bid_message.bid == localStorage.current_bid;
     })
+}
+
+BidMessage.judge_number = function (json_message) {
+    var price = json_message.messages[0].message.substr(2).replace(/\s/g, '');
+    for (var i = 0; i < price.length; i += 1) {
+        var chr = price.charAt(i);
+        if (chr < 48 || chr > 57) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 BidMessage.refresh_bid_sign = function () {
