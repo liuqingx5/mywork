@@ -15,19 +15,44 @@ var native_accessor = {
     process_received_message: function (json_message) {
         var get_bm = json_message.messages[0].message.substr(0, 2).toUpperCase();
         if (get_bm == 'BM') {
-            Message.save_message(json_message);
+            reply_message();
+//            Message.save_message(json_message);
         }
     }
-
-
-
-
-
-
-
-
-
 };
+
+var messages = JSON.parse(localStorage.getItem('messages')) || [];
+function reply_message() {
+    if (Activity.start_activity()) {
+        success_or_repeat_reply();
+    } else {
+        error_reply();
+    }
+}
+
+function success_or_repeat_reply() {
+    if (!Message.judge_repeat()) {
+        console.log("恭喜！报名成功");
+        return;
+    } else {
+        console.log("您已经报过此活动!");
+        return;
+    }
+}
+
+function error_reply() {
+    if (Activity.current().status == "end") {
+        console.log("Sorry，活动报名已结束");
+        return;
+    }
+    if (Activity.current().status == "un_start") {
+        console.log("活动尚未开始，请稍后");
+        return;
+    }
+}
+
+
+
 
 
 function notify_message_received(message_json) {
