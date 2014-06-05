@@ -9,10 +9,10 @@
     %button.btn-4(ng-click="switch_start()" ng-switch-when="end")结束
 %wrapper.wrapper
   %ul.list-style-2
-    %li(ng-repeat="current in currents")
-      %h3
+    %li(ng-repeat="current in currents" style="height:50px")
+      .header-left
         {{current.name}}
-      %h3(align="right")
+      .header-right
         {{current.phone}}
 %footer
   %ul.footer-nav.footer-nav-2tabs

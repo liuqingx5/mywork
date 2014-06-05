@@ -1,6 +1,5 @@
 'use strict';
 
-
 angular.module('myworkApp')
     .controller('SignUpCtrl', function ($scope, $location) {
         $scope.awesomeThings = [

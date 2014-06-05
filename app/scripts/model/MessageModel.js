@@ -12,6 +12,10 @@ Message.received_phone = function (json_message) {
     return json_message.messages[0].phone;
 }
 
+Message.received_price=function (json_message){
+    return json_message.messages[0].message.substr(2).replace(/\s/g, '');
+}
+
 Message.save_message = function (json_message) {
     var messages = JSON.parse(localStorage.getItem('messages')) || [];
     var message = new Message(localStorage.starting_activity, Message.received_name(json_message), Message.received_phone(json_message));
