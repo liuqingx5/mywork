@@ -15,5 +15,7 @@ angular.module('myworkApp')
             $location.path('/bid_result');
         }
 
+        $scope.counts=BidMessage.counts();
+
 
     });

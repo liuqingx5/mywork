@@ -23,14 +23,14 @@ BidMessage.get = function () {
 }
 
 BidMessage.search_starting = function () {
-    return _.find(BidMessage.get(), function (bid_message) {
+    return _.filter(BidMessage.get(), function (bid_message) {
         return bid_message.activity == localStorage.starting_bid_activity && bid_message.bid == localStorage.starting_bid;
-    })
+    });
 }
 
 BidMessage.judge_repeat = function (json_message) {
-    return _.find(BidMessage.get(), function (bid_message) {
-        return BidMessage.search_starting() && bid_message.phone == Message.received_phone(json_message);
+    return _.find(BidMessage.search_starting(), function (bid_message) {
+        return  bid_message.phone == Message.received_phone(json_message);
     })
 }
 
@@ -56,6 +56,25 @@ BidMessage.judge_number = function (json_message) {
             return false;
         }
     }
+}
+
+BidMessage.results = function () {
+    return _.chain(BidMessage.search_current())
+        .sortBy(function (bid_message) {
+            return bid_message.price;
+        })
+        .value();
+}
+
+BidMessage.counts = function () {
+    return _.chain(BidMessage.results())
+        .groupBy(function (result) {
+            return result.price;
+        })
+        .map(function (value, key) {
+            return {"price": key, "count": value.length}
+        })
+        .value();
 }
 
 BidMessage.refresh_bid_sign = function () {

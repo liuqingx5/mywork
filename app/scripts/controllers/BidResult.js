@@ -14,5 +14,7 @@ angular.module('myworkApp')
             $location.path('/price_count');
         }
 
+        $scope.results=BidMessage.results();
+
 
     });

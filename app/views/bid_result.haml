@@ -4,3 +4,12 @@
     %button.btn-4(ng-click="go_bid_list()")返回
   .header-right
     %button.btn-4(ng-click="go_price_count()")统计
+%wrapper.wrapper
+  %ul.list-style-2
+    %li(ng-repeat="result in results" style="height:60px" )
+      .header-left
+        {{result.people}}
+        %br
+        {{result.phone}}
+      .header-right
+        ￥{{result.price}}

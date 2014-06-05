@@ -4,3 +4,10 @@
     %button.btn-4(ng-click="go_bid_list()")返回
   .header-right
     %button.btn-4(ng-click="go_bid_result()")列表
+%wrapper.wrapper
+  %ul.list-style-2
+    %li(ng-repeat="count in counts" style="height:50px")
+      .header-left
+        ￥{{count.price}}
+      .header-right
+        {{count.count}}
