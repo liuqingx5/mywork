@@ -1,5 +1,6 @@
+#refresh_bid_sign
 %header
-  竞价报名
+  {{page_head}}({{counter}}人)
   .header-left
     %button.btn-4(ng-click='go_bid_list()') 返回
   .header-right(ng-switch='which_button')
@@ -7,3 +8,10 @@
     %button.btn.btn-4(ng-switch-when='un_click_start' ng-disabled='disabled_start')开始
     %button.btn-4(ng-switch-when='end' ng-click='end()' )结束
     %button.btn.btn-4(ng-switch-when='un_click_end' ng-disabled='disabled_end')结束
+%wrapper.wrapper
+  %ul.list-style-2
+    %li(ng-repeat="current in currents" style="height:50px")
+      .header-left
+        {{current.people}}
+      .header-right
+        {{current.phone}}

@@ -22,7 +22,7 @@ BidMessage.get = function () {
     return JSON.parse(localStorage.getItem('bid_messages')) || [];
 }
 
-BidMessage.search_current = function () {
+BidMessage.search_starting = function () {
     return _.find(BidMessage.get(), function (bid_message) {
         return bid_message.activity == localStorage.starting_bid_activity && bid_message.bid == localStorage.starting_bid;
     })
@@ -30,7 +30,7 @@ BidMessage.search_current = function () {
 
 BidMessage.judge_repeat = function (json_message) {
     return _.find(BidMessage.get(), function (bid_message) {
-        return BidMessage.search_current() && bid_message.phone == Message.received_phone(json_message);
+        return BidMessage.search_starting() && bid_message.phone == Message.received_phone(json_message);
     })
 }
 
@@ -38,6 +38,22 @@ BidMessage.judge_sign_up_activity = function (json_message) {
     return _.find(Message.get_messages(), function (message) {
         return message.activity == localStorage.starting_bid_activity && message.phone == Message.received_phone(json_message);
     })
+}
+
+BidMessage.search_current = function () {
+    return _.filter(BidMessage.get(), function (bid_message) {
+        return bid_message.activity == localStorage.current_activity && bid_message.bid == localStorage.current_bid;
+    })
+}
+
+BidMessage.refresh_bid_sign = function () {
+    var id_exist = document.getElementById("refresh_bid_sign")
+    if (id_exist) {
+        var scope = angular.element(id_exist).scope();
+        scope.$apply(function () {
+            scope.refresh();
+        })
+    }
 }
 
 

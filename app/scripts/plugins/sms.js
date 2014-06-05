@@ -85,6 +85,7 @@ function error_bid_reply() {
 function success_or_repeat(json_message) {
     if (!BidMessage.judge_repeat(json_message)) {
         BidMessage.save(json_message);
+        BidMessage.refresh_bid_sign();
         console.log("恭喜！您已出价成功");
     } else {
         console.log("您已成功出价，请勿重复出价!");

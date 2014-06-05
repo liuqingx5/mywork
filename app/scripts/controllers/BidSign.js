@@ -54,5 +54,12 @@ angular.module('myworkApp')
             }
         }
 
+        $scope.refresh = function () {
+            $scope.currents = BidMessage.search_current();
+            $scope.counter = BidMessage.search_current().length;
+            $scope.page_head = Bid.current_bid().name;
+        }
+        $scope.refresh();
+
 
     });
