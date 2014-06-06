@@ -45,19 +45,17 @@ BidMessage.search_current = function () {
     })
 }
 
-BidMessage.judge_number=function (json_message){
+BidMessage.judge_number = function (json_message) {
     var prices = json_message.messages[0].message.substr(2).replace(/\s/g, '');
-    return _.find(prices,function(price){
+    return _.find(prices, function (price) {
         return price.charAt(price);
     })
 }
 
 BidMessage.results = function () {
-    return _.chain(BidMessage.search_current())
-        .sortBy(function (bid_message) {
-            return bid_message.price;
-        })
-        .value();
+    return _.sortBy(BidMessage.search_current(), function (bid_message) {
+        return bid_message.price;
+    })
 }
 
 BidMessage.counts = function () {

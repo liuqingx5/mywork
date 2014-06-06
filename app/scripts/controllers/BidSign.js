@@ -20,6 +20,7 @@ angular.module('myworkApp')
                 judge_is_start_bid_activity();
             }
         }
+
         bid_status[Bid.current_bid().status]();
 
         function judge_is_start_bid_activity() {

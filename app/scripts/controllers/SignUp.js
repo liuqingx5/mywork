@@ -8,19 +8,27 @@ angular.module('myworkApp')
             'Karma'
         ];
 
-        if (!Bid.start_bid_or_activity()) {
-            $scope.show_which = "start";
-        } else {
-            judge_current_is_starting();
+        var activity_status = {
+            'start': function () {
+                $scope.show_which = "end";
+            },
+            'un_start': function () {
+                judge_starting();
+            },
+            'end': function () {
+                judge_starting();
+            }
         }
 
-        function judge_current_is_starting() {
-            if (Activity.current_is_starting()) {
-                $scope.show_which = "end";
+        activity_status[Activity.current().status]();
+
+        function judge_starting() {
+            if (Bid.start_bid_or_activity()) {
+                $scope.show_which = "un_click";
+                $scope.disabled = true;
                 return;
             }
-            $scope.show_which = "un_click";
-            $scope.disabled = true;
+            $scope.show_which = "start";
         }
 
         $scope.activity_list = function () {
