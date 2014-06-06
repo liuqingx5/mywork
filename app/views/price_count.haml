@@ -1,5 +1,5 @@
 %header
-  价格统计
+  {{page_head}}({{counter}}人)
   .header-left
     %button.btn-4(ng-click="go_bid_list()")返回
   .header-right
@@ -10,4 +10,12 @@
       .header-left
         ￥{{count.price}}
       .header-right
-        {{count.count}}
+        {{count.count}}人
+%footer
+  %div(ng-show="success")
+    %pre
+      竞价结果：{{bid_success.people}} ￥{{bid_success.price}}  {{bid_success.phone}} 竞价成功！
+%footer
+  %div(ng-show="fail")
+    %pre
+      竞价结果：竞价失败！

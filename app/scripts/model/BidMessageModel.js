@@ -77,6 +77,20 @@ BidMessage.counts = function () {
         .value();
 }
 
+BidMessage.success_or_no = function () {
+    return _.find(BidMessage.counts(), function (count) {
+        return count.count == '1';
+    })
+}
+
+BidMessage.success_bid = function () {
+    if (BidMessage.success_or_no()) {
+        return _.find(BidMessage.results(), function (result) {
+            return result.price == BidMessage.success_or_no().price;
+        })
+    }
+}
+
 BidMessage.refresh_bid_sign = function () {
     var id_exist = document.getElementById("refresh_bid_sign")
     if (id_exist) {
