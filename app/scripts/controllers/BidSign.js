@@ -29,11 +29,9 @@ angular.module('myworkApp')
             if (!Bid.start_bid_or_activity()) {
                 $scope.which_button = "start";
                 return;
-            } else {
-                $scope.which_button = "un_click_start";
-                $scope.disabled_start = true;
-                return;
             }
+            $scope.which_button = "un_click_start";
+            $scope.disabled_start = true;
         }
 
         $scope.go_bid_list = function () {

@@ -13,6 +13,7 @@ angular.module('myworkApp')
         } else {
             judge_current_is_starting();
         }
+
         function judge_current_is_starting() {
             if (Activity.current_is_starting()) {
                 $scope.show_which = "end";

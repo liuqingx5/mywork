@@ -45,18 +45,6 @@ BidMessage.search_current = function () {
     })
 }
 
-//BidMessage.judge_number = function (json_message) {
-//    var price = json_message.messages[0].message.substr(2).replace(/\s/g, '');
-//    for (var i = 0; i < price.length; i += 1) {
-//        var chr = price.charAt(i);
-//        if (chr < 48 || chr > 57) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
-//}
-
 BidMessage.judge_number=function (json_message){
     var prices = json_message.messages[0].message.substr(2).replace(/\s/g, '');
     return _.find(prices,function(price){

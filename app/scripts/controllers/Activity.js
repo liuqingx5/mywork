@@ -28,10 +28,8 @@ angular.module('myworkApp')
                 Activity.save_current_activity(activity.activity)
                 $location.path('/sign_up');
                 return;
-            } else {
-                $scope.repeat = true;
-                return;
             }
+            $scope.repeat = true;
         }
 
         if (!Activity.activities().length) {

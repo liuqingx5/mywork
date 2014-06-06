@@ -27,8 +27,7 @@ var native_accessor = {
 function reply_message(json_message) {
     if (Activity.start_activity()) {
         success_or_repeat_reply(json_message);
-    }
-    else {
+    } else {
         error_reply();
     }
 }
@@ -39,20 +38,16 @@ function success_or_repeat_reply(json_message) {
         Message.refresh_sign_up();
         console.log("恭喜！报名成功");
         return;
-    } else {
-        console.log("您已经报过此活动!");
-        return;
     }
+    console.log("您已经报过此活动!");
 }
 
 function error_reply() {
     if (Activity.current().status == "end") {
         console.log("Sorry，活动报名已结束");
-        return;
     }
     if (Activity.current().status == "un_start") {
         console.log("活动尚未开始，请稍后");
-        return;
     }
 }
 
@@ -67,9 +62,9 @@ function bid_message_reply(json_message) {
 function judge_sign_or_no(json_message) {
     if (BidMessage.judge_sign_up_activity(json_message)) {
         success_or_repeat(json_message);
-    } else {
-        console.log("对不起，您没有报名此次活动！");
+        return;
     }
+    console.log("对不起，您没有报名此次活动！");
 }
 
 function error_bid_reply() {
@@ -86,9 +81,9 @@ function success_or_repeat(json_message) {
         BidMessage.save(json_message);
         BidMessage.refresh_bid_sign();
         console.log("恭喜！您已出价成功");
-    } else {
-        console.log("您已成功出价，请勿重复出价!");
+        return;
     }
+    console.log("您已成功出价，请勿重复出价!");
 }
 
 
