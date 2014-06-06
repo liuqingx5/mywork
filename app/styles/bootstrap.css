@@ -3178,7 +3178,7 @@ table th[class*="span"],
   filter: alpha(opacity=40);
 }
 
-button.close {
+.button.close {
   padding: 0;
   cursor: pointer;
   background: transparent;

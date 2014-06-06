@@ -13,30 +13,28 @@
         {{result.phone}}
       .header-right
         ￥{{result.price}}
-.modal.fade#ModalSuccess(role="dialog")
-  .modal-dialog
-    .modal-content
-      .modal-header
-        %button( type = "button" class="close" data-dismiss = "modal" aria-hidden = "true") &times;
-        %h4.modal-title
-      .modal-body
-        %center
-          {{bid_success.people}}￥{{bid_success.price}}
-          %p
-          {{bid_success.phone}}
-          %p
-          竞价成功！
-      .modal-footer
-.modal.fade#ModalFail
-  .modal-dialog
-    .modal-content
-      .modal-header
-        %button(aria-hidden = "true" class="close"  data-dismiss = "modal" type = "button") &times;
-        %h4.modal-title
-      .modal-body
-        %center
-          竞价失败！
-      .modal-footer
+.modal.fade#ModalSuccess(style="display: inline-table")
+  .modal-content
+    .modal-header
+      %button.close(type="button" data-dismiss="modal" aria-hidden="true") &times;
+      %h7.modal-title 竞价成功
+    .modal-body
+      %center
+        {{bid_success.people}}￥{{bid_success.price}}
+        %p
+        {{bid_success.phone}}
+        %p
+        竞价成功！
+    .modal-footer
+.modal.fade#ModalFail(style="display: inline-table")
+  .modal-content
+    .modal-header
+      %button.close(type="button" data-dismiss="modal" aria-hidden="true") &times;
+      %h7.modal-title 竞价失败
+    .modal-body
+      %center
+        竞价失败！
+    .modal-footer
 %footer
   %div(ng-show="success")
     %pre
