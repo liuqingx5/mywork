@@ -17,14 +17,12 @@ var native_accessor = {
         if (get_bm == 'BM') {
             reply_message(json_message);
         }
-        if (get_bm == 'JJ' && BidMessage.judge_number(json_message)) {
+        if (get_bm == 'JJ' && !BidMessage.judge_number(json_message)) {
             bid_message_reply(json_message);
         }
     }
 
-
 };
-
 
 function reply_message(json_message) {
     if (Activity.start_activity()) {

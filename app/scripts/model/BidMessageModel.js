@@ -22,16 +22,15 @@ BidMessage.get = function () {
     return JSON.parse(localStorage.getItem('bid_messages')) || [];
 }
 
-BidMessage.search_starting = function () {
-    return _.filter(BidMessage.get(), function (bid_message) {
-        return bid_message.activity == localStorage.starting_bid_activity && bid_message.bid == localStorage.starting_bid;
-    });
-}
-
 BidMessage.judge_repeat = function (json_message) {
-    return _.find(BidMessage.search_starting(), function (bid_message) {
-        return  bid_message.phone == Message.received_phone(json_message);
-    })
+    return _.chain(BidMessage.get())
+        .filter(function (bid_message) {
+            return bid_message.activity == localStorage.starting_bid_activity && bid_message.bid == localStorage.starting_bid;
+        })
+        .find(function (bid_message) {
+            return  bid_message.phone == Message.received_phone(json_message);
+        })
+        .value()
 }
 
 BidMessage.judge_sign_up_activity = function (json_message) {
@@ -46,16 +45,23 @@ BidMessage.search_current = function () {
     })
 }
 
-BidMessage.judge_number = function (json_message) {
-    var price = json_message.messages[0].message.substr(2).replace(/\s/g, '');
-    for (var i = 0; i < price.length; i += 1) {
-        var chr = price.charAt(i);
-        if (chr < 48 || chr > 57) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+//BidMessage.judge_number = function (json_message) {
+//    var price = json_message.messages[0].message.substr(2).replace(/\s/g, '');
+//    for (var i = 0; i < price.length; i += 1) {
+//        var chr = price.charAt(i);
+//        if (chr < 48 || chr > 57) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
+//}
+
+BidMessage.judge_number=function (json_message){
+    var prices = json_message.messages[0].message.substr(2).replace(/\s/g, '');
+    return _.find(prices,function(price){
+        return price.charAt(price);
+    })
 }
 
 BidMessage.results = function () {

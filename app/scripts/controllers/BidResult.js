@@ -15,6 +15,8 @@ angular.module('myworkApp')
         }
 
         $scope.results = BidMessage.results();
+        $scope.counter = BidMessage.search_current().length;
+        $scope.page_head = Bid.current_bid().name;
 
         if (BidMessage.success_bid()) {
             $scope.bid_success = BidMessage.success_bid();
@@ -35,9 +37,6 @@ angular.module('myworkApp')
                 }, 3000)
             }, 1)
         }
-
-        $scope.counter = BidMessage.search_current().length;
-        $scope.page_head = Bid.current_bid().name;
 
 
     });
