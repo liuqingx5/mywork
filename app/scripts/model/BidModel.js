@@ -63,3 +63,7 @@ Bid.start_bid = function () {
 Bid.bid_background_yellow = function (starting_bid) {
     return localStorage.starting_bid == starting_bid && localStorage.current_activity == localStorage.starting_bid_activity;
 }
+
+Bid.judge_un_click = function () {
+    return Bid.start_bid_or_activity() || Message.current_sign_up().length == 0;
+}

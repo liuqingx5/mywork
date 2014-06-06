@@ -13,13 +13,17 @@ var native_accessor = {
     },
 
     process_received_message: function (json_message) {
-        var get_bm = json_message.messages[0].message.substr(0, 2).toUpperCase();
-        if (get_bm == 'BM') {
-            reply_message(json_message);
+        var get_bm_jj = {
+            'BM': function () {
+                reply_message(json_message);
+            },
+            'JJ': function () {
+                if (!BidMessage.judge_number(json_message)) {
+                    bid_message_reply(json_message);
+                }
+            }
         }
-        if (get_bm == 'JJ' && !BidMessage.judge_number(json_message)) {
-            bid_message_reply(json_message);
-        }
+        get_bm_jj[json_message.messages[0].message.substr(0, 2).toUpperCase()]();
     }
 
 };
@@ -28,7 +32,7 @@ function reply_message(json_message) {
     if (Activity.start_activity()) {
         success_or_repeat_reply(json_message);
     } else {
-        error_reply();
+        error_reply[Activity.current().status]();
     }
 }
 
@@ -42,12 +46,12 @@ function success_or_repeat_reply(json_message) {
     console.log("您已经报过此活动!");
 }
 
-function error_reply() {
-    if (Activity.current().status == "end") {
-        console.log("Sorry，活动报名已结束");
-    }
-    if (Activity.current().status == "un_start") {
+var error_reply = {
+    'un_start': function () {
         console.log("活动尚未开始，请稍后");
+    },
+    'end': function () {
+        console.log("Sorry，活动报名已结束");
     }
 }
 
@@ -55,7 +59,7 @@ function bid_message_reply(json_message) {
     if (Bid.start_bid()) {
         judge_sign_or_no(json_message);
     } else {
-        error_bid_reply();
+        error_bid_reply[Bid.current_bid().status]();
     }
 }
 
@@ -67,11 +71,11 @@ function judge_sign_or_no(json_message) {
     console.log("对不起，您没有报名此次活动！");
 }
 
-function error_bid_reply() {
-    if (Bid.current_bid().status == "un_start") {
+var error_bid_reply = {
+    'un_start': function () {
         console.log("对不起，竞价尚未开始！");
-    }
-    if (Bid.current_bid().status == "end") {
+    },
+    'end': function () {
         console.log("对不起，竞价已结束！");
     }
 }

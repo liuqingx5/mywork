@@ -7,7 +7,7 @@ angular.module('myworkApp')
             'AngularJS',
             'Karma'
         ];
-        if (Bid.start_bid_or_activity() || Message.current_sign_up().length == 0) {
+        if (Bid.judge_un_click()) {
             $scope.which_show = "un_click";
             $scope.disabled = true;
         } else {

@@ -8,22 +8,19 @@ angular.module('myworkApp')
             'Karma'
         ];
 
-        button_status();
-        function button_status() {
-            var current_bid = Bid.current_bid();
-            if (current_bid.status == "start") {
+        var bid_status = {
+            'start': function () {
                 $scope.which_button = "end";
-                return;
-            }
-            if (current_bid.status == "end") {
+            },
+            'end': function () {
                 $scope.which_button = "un_click_end";
                 $scope.disabled_end = true;
-                return;
-            }
-            if (current_bid.status == "un_start") {
+            },
+            'un_start': function () {
                 judge_is_start_bid_activity();
             }
         }
+        bid_status[Bid.current_bid().status]();
 
         function judge_is_start_bid_activity() {
             if (!Bid.start_bid_or_activity()) {

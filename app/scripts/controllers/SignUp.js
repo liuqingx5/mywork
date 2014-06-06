@@ -17,10 +17,10 @@ angular.module('myworkApp')
         function judge_current_is_starting() {
             if (Activity.current_is_starting()) {
                 $scope.show_which = "end";
-            } else {
-                $scope.show_which = "un_click";
-                $scope.disabled = true;
+                return;
             }
+            $scope.show_which = "un_click";
+            $scope.disabled = true;
         }
 
         $scope.activity_list = function () {
